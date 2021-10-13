@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", clickFunc);
-    timerBegin();
+
+    var startBtn = document.getElementById("start-btn")
+    startBtn.addEventListener("click", timer);
 })
 
 const timer = () => {
@@ -10,14 +12,17 @@ const timer = () => {
         time += 1;
         timeElement.innerHTML = time;
     };
-    console.log("timer begins");
-    setInterval(changeTime, 1000);
-};
+    var interval = setInterval(changeTime, 1000);
 
-const timerBegin = () => {
-    const startTimer = document.getElementById("start-btn")
-    startTimer.addEventListener("click", timer);
-}
+    var pause = () => {
+        console.log("timer stopped")
+        clearInterval(interval)
+    }
+
+    var stopBtn = document.getElementById("stop-btn");
+    stopBtn.addEventListener("click", pause);
+
+};
 
 const clickFunc = () => {
     var topHeader = document.getElementById("top-header");
