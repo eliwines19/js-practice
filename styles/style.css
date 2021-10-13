@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+
+}
+
+#top-header {
+    color: black;
+}
+
+#time {
+    color: white;
+}
+
+#time-div {
+    background-color: rgb(80, 80, 80);
+    width: fit-content;
+    padding: 5pt 5pt;
+}
+
+#start-btn:hover, #stop-btn:hover {
+    cursor: pointer;
+}
+
+#time-div h3 {
+    color: white;
+    background-color: grey;
+    padding: 5pt 5pt;
+    width: fit-content;
+}
